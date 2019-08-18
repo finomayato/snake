@@ -4,9 +4,7 @@ extern crate glutin_window;
 extern crate opengl_graphics;
 
 use piston::window::WindowSettings;
-// use piston::event_loop::{Events, EventSettings};
 use piston::event_loop::*;
-// use piston::input::RenderArgs;
 use piston::input::*;
 use glutin_window::GlutinWindow as Window;
 use opengl_graphics::{GlGraphics, OpenGL};
@@ -32,7 +30,7 @@ impl App {
 
             let transform = c.transform.trans(x, y)
                                        .rot_rad(rotation)
-                                       .trans(-25.0, -25.0);
+                                       .trans(-65.0, -65.0);
             rectangle(RED, square, transform, gl);
         })
     }
